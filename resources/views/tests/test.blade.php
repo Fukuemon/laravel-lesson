@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="text-3xl">Text</div>
+    @foreach($values as $value)
+        <div class="text-3xl">
+            {{ $value->id }} <br>
+            {{ $value->text } <br>}
+        </div>
+    @endforeach
 </body>
 </html>
