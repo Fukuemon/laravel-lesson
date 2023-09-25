@@ -9,7 +9,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $values = Pest::all(); // 全て取得
+        $values = Post::all(); // 全て取得
 
         // dd($values); // 値を確認したい時に利用する(dieとvar_dumpの合わせ技)
 
