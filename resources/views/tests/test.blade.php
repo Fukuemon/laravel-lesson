@@ -9,7 +9,7 @@
     @foreach($values as $value)
         <div class="text-3xl">
             {{ $value->id }} <br>
-            {{ $value->text } <br>}
+            {{ $value->text }} <br>
         </div>
     @endforeach
 </body>
