@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('contact_forms', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 20); //名前
+            $table->string('email', 255); // メールアドレス
+            $table->longText('url')->nullable(); // メッセージ
+            $table->boolean('gender'); //性別
+            $table->tinyInteger('age'); //年齢
+            $table->string('contact', 200); //お問い合わせ種類
             $table->timestamps();
         });
     }
