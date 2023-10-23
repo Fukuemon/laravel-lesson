@@ -12,6 +12,13 @@
             {{ $value->id }} <br>
             {{ $value->contents }} <br>
         </div>
+
+        <h2>Comments</h2>
+        <ul>
+            @foreach($value->comments as $comment)
+                <li>{{ $comment->name}}:{{ $comment->body }}</li>
+            @endforeach
+        </ul>
     @endforeach
 </body>
 </html>
