@@ -9,10 +9,9 @@ class PostController extends Controller
 {
     public function index()
     {
-        $values = Post::all(); // 全て取得
+        //関連する'comments'も取得
+        $values = Post::with('comments')->get();
 
-        // dd($values); // 値を確認したい時に利用する(dieとvar_dumpの合わせ技)
-
-        return view("posts.post", compact("values")); // compact関数でviewに渡す
+        return view("posts.post", compact("values"));
     }
 }
